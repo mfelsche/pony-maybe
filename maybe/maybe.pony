@@ -42,7 +42,6 @@ primitive Opt
     (consume opt) as T^
 
   fun iter[T](opt: Maybe[T]): Iterator[T^]^ =>
-    // TODO: use iftype
     match consume opt
     | let n: None =>
       object ref is Iterator[T^]
